@@ -1,0 +1,268 @@
+/* Imports */
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+/* Fonts */
+@font-face 
+{
+    font-family: "CelticTime";
+    src: url("../fonts/CelticTime.ttf");
+    font-size: 3rem;
+}
+
+/* Type Nodes */
+
+body
+{
+    background-color: #131313;
+    margin: 0;
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    justify-content: flex-end;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, i
+{
+    font-family: "Lato";
+    font-weight: 400;
+    color: #c7cfdd;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+footer
+{
+    background-color: #000000cc;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    height: 80px;
+    /* justify-content: center; */
+}
+
+footer>*
+{
+    margin-inline: 10px;
+}
+
+/* ID Nodes */
+#topbar
+{
+    background-color: #000000cc;
+    display: flex;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    align-items: center;
+    justify-content: space-between;
+    height: 45px;
+}
+
+#topbar>h1
+{
+    font-family: "CelticTime";
+    font-size: 3rem;
+    margin: 0;
+    cursor: default;
+    padding-inline: 15px;
+}
+
+#topbar>nav
+{
+    display: flex;
+    align-items: center;
+    padding-inline: 15px;
+}
+
+#background
+{
+    position: fixed;
+    z-index: -1;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+}
+
+#background>img
+{
+    position: absolute;
+    filter: drop-shadow(0px 0px 5px #000000);
+    max-width: 40%;
+    width: 700px;
+}
+
+#bgmodel
+{
+    bottom: 0;
+    left: -100px;
+}
+
+#bgpixelart
+{
+    image-rendering: pixelated;
+    transform: rotateY(180deg);
+    right: -100px;
+    bottom: 0;
+}
+
+#content
+{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    margin: auto;
+}
+
+#content>h1
+{
+    font-size: 3rem;
+}
+
+#content>h2
+{
+    font-size: 2rem;
+}
+
+#content>h1>.malawalogo
+{
+    font-size: 5rem;
+}
+
+#socials
+{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: auto;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+#footnotes span
+{
+    display: flex;
+    align-items: baseline;
+    /* align-self: flex-start; */
+}
+
+#footnotes h1, #footnotes h2, #footnotes p
+{
+    margin: 0;
+}
+
+#footerlinks
+{
+    display: flex;
+}
+
+/* Class Nodes */
+.malawalogo
+{
+    font-family: "CelticTime";
+    background-image: linear-gradient(90deg, #b6d5ff, #708ad9);
+    background-clip: text;
+    color: transparent;
+}
+
+.social
+{
+    display: flex;
+    padding: 5px;
+    padding-inline: 10px;
+    align-items: center;
+    margin: 20px;
+    background-color: #000000cc;
+    border-radius: 5px;
+    border: 1px dashed #c7cfdd;
+    width: 200px;
+    justify-content: center;
+}
+
+.social>i
+{
+    font-size: 2rem;
+    margin-right: 10px;
+}
+
+.social:hover
+{
+    scale: 1.1;
+}
+
+.footerlink
+{
+    display: flex;
+    background-color: #131313;
+    padding: 6px;
+    padding-inline: 10px;
+    border-radius: 4px;
+    align-items: center;
+    margin-inline: 10px;
+    scale: .9;
+}
+
+.footerlink i, .footerlink svg
+{
+    font-size: 2rem;
+    margin-right: 10px;
+}
+
+.footerlink h1
+{
+    font-size: 1.3rem;
+    margin: 0;
+}
+
+.footerlink h2
+{
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* Media */
+@media screen and (max-width: 700px) 
+{
+    body
+    {
+        margin-top: 5vh;
+    }
+
+    footer
+    {
+        height: auto;
+        flex-direction: column-reverse;
+    }
+
+    footer>* 
+    {
+        margin: 0;
+    }
+
+    #bgmodel
+    {
+        left: 0;
+    }
+
+    #bgpixelart
+    {
+        right: 0;
+    }
+
+    #footerlinks
+    {
+        flex-direction: column;
+    }
+
+    .footerlink
+    {
+        margin: 5px;
+    }
+}
