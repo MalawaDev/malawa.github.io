@@ -43,7 +43,6 @@ footer
     display: flex;
     align-items: center;
     height: 80px;
-    /* justify-content: center; */
 }
 
 footer>*
@@ -78,6 +77,11 @@ footer>*
     display: flex;
     align-items: center;
     padding-inline: 15px;
+}
+
+#topbar>nav>a
+{
+    margin-inline: 10px;
 }
 
 #background
